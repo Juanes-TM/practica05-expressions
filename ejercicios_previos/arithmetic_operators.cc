@@ -45,14 +45,10 @@ int calculator(int number1, int number2, char operador){
 
 int main(){
   int number1, number2;
+  char list_operators[8] = {'+','-','*','/','%','<','>','='};
   std::cin >> number1 >> number2;
-  std::cout << number1 << " + " << number2 << " = "<< calculator(number1, number2, '+') <<std::endl;
-  std::cout << number1 << " - " << number2 << " = "<< calculator(number1, number2, '-') <<std::endl;
-  std::cout << number1 << " * " << number2 << " = "<< calculator(number1, number2, '*') <<std::endl;
-  std::cout << number1 << " / " << number2 << " = "<< calculator(number1, number2, '/') <<std::endl;
-  std::cout << number1 << " % " << number2 << " = "<< calculator(number1, number2, '%') <<std::endl;	
-  std::cout << number1 << " < " << number2 << " = "<< calculator(number1, number2, '<') <<std::endl; 
-  std::cout << number1 << " > " << number2 << " = "<< calculator(number1, number2, '>') <<std::endl;
-  std::cout << number1 << " == " << number2 << " = "<< calculator(number1, number2, '=') <<std::endl;
+  for(int i=0; i<8; i++){
+    std::cout << number1 << " " << list_operators[i] << " "<< number2 << " = "<< calculator(number1, number2, list_operators[i]) <<std::endl;
+  }
   return 0;
 }
