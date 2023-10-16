@@ -14,20 +14,45 @@
 
 #include <iostream>
 
+int calculator(int number1, int number2, char operador){
+	switch (operador){
+		case '+':
+			return number1+number2;
+
+		case '-':
+			return number1-number2;
+
+		case '*':
+			return number1*number2;
+
+		case '/':
+			return number1/number2;
+
+		case '%':
+			return number1%number2;
+
+		case '<':
+			return number1<number2;
+
+		case '>':
+			return number1>number2;
+
+		case '=':
+			return number1==number2;
+	}
+	return 0;
+}
+
 int main(){
   int number1, number2;
   std::cin >> number1 >> number2;
-  std::cout << number1 << " + " << number1 << " = "<< number1+number2 <<std::endl;
-  std::cout << number1 << " - " << number1 << " = "<< number1-number2 <<std::endl;
-  std::cout << number1 << " * " << number1 << " = "<< number1*number2 <<std::endl;
-  std::cout << number1 << " / " << number1 << " = "<< number1/number2 <<std::endl;
-  std::cout << number1 << " % " << number1 << " = "<< number1%number2 <<std::endl;
-  std::cout << number1 << " > " << number1 << " = "<< (number1 > number2) <<std::endl;
-  std::cout << number1 << " < " << number1 << " = "<< (number1 < number2) <<std::endl;
-  std::cout << number1 << " <= " << number1 << " = "<< (number1 <= number2) <<std::endl;
-  std::cout << number1 << " >= " << number1 << " = "<< (number1 >= number2) <<std::endl;
-  std::cout << number1 << " and " << number1 << " = "<< (number1 and number2) <<std::endl;
-  std::cout << number1 << " or " << number1 << " = "<< (number1 or number2) <<std::endl;
-  std::cout << number1 << " xor " << number1 << " = "<< (number1 xor number2) <<std::endl;
+  std::cout << number1 << " + " << number2 << " = "<< calculator(number1, number2, '+') <<std::endl;
+  std::cout << number1 << " - " << number2 << " = "<< calculator(number1, number2, '-') <<std::endl;
+  std::cout << number1 << " * " << number2 << " = "<< calculator(number1, number2, '*') <<std::endl;
+  std::cout << number1 << " / " << number2 << " = "<< calculator(number1, number2, '/') <<std::endl;
+  std::cout << number1 << " % " << number2 << " = "<< calculator(number1, number2, '%') <<std::endl;	
+  std::cout << number1 << " < " << number2 << " = "<< calculator(number1, number2, '<') <<std::endl; 
+  std::cout << number1 << " > " << number2 << " = "<< calculator(number1, number2, '>') <<std::endl;
+  std::cout << number1 << " == " << number2 << " = "<< calculator(number1, number2, '=') <<std::endl;
   return 0;
 }

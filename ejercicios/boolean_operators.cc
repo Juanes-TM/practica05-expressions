@@ -24,7 +24,7 @@ int main(){
 	bool A_input[4] = {0,0,1,1}, B_input[4] = {0,1,0,1};
 	std::cout << "A " << " B " << " -A " << " -B " " A and B " << " A or B " << " A xor B " << std::endl;
 	for(int i=0; i<4; i++){
-		var_A = A_input[i];
+	  var_A = A_input[i];
 	  var_B = B_input[i];
 		std::cout << var_A << "  " << var_B << "   " << OperatorNot(var_A) << "   " << OperatorNot(var_B) << "     " << OperatorAnd(var_A, var_B) 	<< "       " << OperatorOr(var_A, var_B) << "        " << OperatorXor(var_A, var_B) << std::endl;
 	}
