@@ -6,7 +6,7 @@
   *
   * @file integer_division_and_reminder.cc
   * @author Juan Esteban Tamayo Marmolejo alu0101592916@ull.edu.es
-  * @date Oct 15 2023
+  * @date Oct 16 2023
   * @brief Imprime la tabla de verdad, con diferentes operaciones binarias, entre dos variables booleanas.
   * @bug There are no known bugs
   * @see https://jutge.org/problems/P48107
